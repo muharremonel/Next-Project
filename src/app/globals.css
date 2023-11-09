@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.input-disabled {
+    background-color: inherit !important;
+}
+*{
+    font-family: "Poppins", SansSerif !important;
+}
+.address-input {
+    padding: 15px 10px;
+}
+
+@media (max-width: 768px) {
+    .address-input {
+        padding: 30px 5px;
+    }
+}
+
+
+:root {
+    --fc-small-font-size: 0.85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+    --fc-neutral-text-color: #808080;
+    --fc-border-color: transparent;
+
+    --fc-button-text-color: #fff;
+    --fc-button-bg-color: #0057ff;
+    --fc-button-border-color: #2c3e50;
+    --fc-button-hover-bg-color: #1e2b37;
+    --fc-button-hover-border-color: #1a252f;
+    --fc-button-active-bg-color: #1a252f;
+    --fc-button-active-border-color: #151e27;
+
+    --fc-event-bg-color: #0057ff;
+    --fc-event-border-color: #0057ff;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: #e6e6fa;
+    --fc-now-indicator-color: red;
+}
+
+.fc-daygrid-day-top,
+.fc-daygrid-day-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fc-toolbar-title {
+    display: flex;
+    justify-content: center;
+}
+
+.fc-daygrid-divider {
+    border-color: red !important; /* Dikey çizgilerin istediğiniz renk kodunu burada belirleyin */
+}
+
+.fc-daygrid-divider-vertical {
+    border-color: green !important; /* Yatay çizgilerin istediğiniz renk kodunu burada belirleyin */
+}
+
+.fc-toolbar.fc-header-toolbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fc-next-button,
+.fc-prev-button {
+    box-shadow: none !important;
+}
+
+.fc-daygrid-day {
+    cursor: pointer !important;
+}
+
+/* Küçük ekranlar için buton stilleri */
+@media (max-width: 768px) {
+    .fc-toolbar .fc-button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+/* Daha küçük ekranlar için buton stilleri */
+@media (max-width: 480px) {
+    .fc-toolbar .fc-button {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+/* the text color of the drop label*/
+.filepond--drop-label {
+    color: #555;
+    min-height: 200px !important;
+}
+
+/* the background color of the filepond drop area */
+.filepond--panel-root {
+    background-color: transparent !important;
+}
+
+/* bordered drop area */
+.filepond--panel-root {
+    background-color: transparent;
+    border: 2px dashed #d8d8d8;
+    height: 200px;
+}
+
+.swiper {
+    width: 100% !important;
+}
+
+.fileUploaderContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.fileUploaderCircle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #222D68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.fileUploaderCircle:hover {
+    background-color: #093388;
+    transition: 0.3s;
+}
+
+.fileUploaderPlus {
+    background-color: white;
+    width: 5px;
+    height: 30px;
+    position: absolute;
+}
+
+.fileUploaderPlus::after {
+    content: " ";
+    position: absolute;
+    background-color: white;
+    width: 5px;
+    height: 30px;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.filepond--credits {
+    display: none;
+}
+
+.map-container {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.popUpStarterContainer {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.popUpStarter {
+    top: 50%;
+    left: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-reach-combobox-popover] {
+    z-index: 101;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 20px;
+    width: 20px;
+    min-height: 20px;
+    height: 20px;
+    border-radius: 4px;
+    outline: 2px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #5345ee;
+}
+
+input[type="checkbox"]::before {
+    content: "\2713";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
+
+input[type="radio"]{
+    background-color: #222D68;
+    border-color: #222D68;
+}
+
+@media (max-width: 768px) {
+    .responsive-tabs {
+        flex-direction: column !important;
+    }
+}
+
+.noscrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Edge */
+}
+
+.noscrollbar {
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+.cardcontainer {
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  .myFilePond .filepond--drop-label {
+    font-size: 14px; 
+}
+
+.myFilePond .filepond--label-action {
+    text-decoration: underline;
+}
+.filePonds{
+    border: none;
+}
+.filePonds .filepond--drop-label{
+    min-height: 80px !important;
+}
+.myFilePond {
+    height: 80px;
+}
+.myFilePond .filepond--drop-label{
+    min-height: 80px !important;
+}
+.active{
+    background-color: #E9EAF0;
+    border-radius: 10px;
+    color: #222D68;
+}
+
+.projects{
+    background: rgb(11,143,255);
+    background: linear-gradient(90deg, rgba(11,143,255,1) 0%, rgba(0,113,167,1) 100%);
+}
+
+.cyber{
+    background: rgb(1,2,67);
+    background: linear-gradient(90deg, rgba(1,2,67,1) 0%, rgba(65,157,255,1) 100%);
+}
+
+.girisim{
+    background: rgb(234,209,225);
+    background: linear-gradient(90deg, rgba(234,209,225,1) 0%, rgba(185,103,158,1) 100%);
+}
+
+.unity{
+    background: rgb(54,0,62);
+    background: linear-gradient(90deg, rgba(54,0,62,1) 0%, rgba(74,6,130,1) 100%);
+}
+
+
+@media (max-width: 768px) {
+    .intermediate-page {
+        width: 20rem !important;
+        height: 16rem !important;
+    }
+    .intermediate-pages {
+        width: 20rem !important;
+        height: 16rem !important;
+    }
+    .slider-img{
+        height: 100% !important;
+    }
+
+}
+@media (max-width: 820px) {
+    .margin-tops{
+        margin-top: 40px;
+    }
+}
+.slider-img{
+    height: 352px;
+}
+.intermediate-page {
+    width: 45rem;
+    height: 45rem;
+}
+.intermediate-pages {
+    width: 45rem;
+    height: 35rem;
+}
